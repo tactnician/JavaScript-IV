@@ -73,7 +73,13 @@ class Student extends Person{
         this.favSubjects = attribs.favSubjects,
     }
     listsSubjects(arr){
-        return arr.forEach
+        return arr.forEach((e) => console.log(e));
+    }
+    prAssignment(subj){
+        console.log(`${this.name} has submitted a PR for ${subj}`);
+    }
+    sprintChallenge(sub){
+        console.log(`${this.name} has begun sprint challege on ${subj}`);
     }
 }
 
@@ -89,6 +95,22 @@ class Student extends Person{
 // * ProjectManangers have the following Methods:
 //   * `standUp` a method that takes in a slack channel and logs `{name} announces to {channel}, @channel standy times!​​​​​
 //   * `debugsCode` a method that takes in a student object and a subject and logs out `{name} debugs {student.name}'s code on {subject}`
+
+class ProjectManager extends Instructor{
+    constructor(attribute){
+        super(attribute),
+        this.gradClassName = attribute.gradClassName,
+        this.favInstructor = attribute.favInstructor, 
+    }
+    standUp(channel){
+        console.log( `${this.name} announces to ${channel}, @${channel} standy times!​​​`​​);
+    }
+    debugsCode(student, subject){
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`)
+    }
+
+
+
 
 // -----------------------------------------------
 
